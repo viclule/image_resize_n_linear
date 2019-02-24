@@ -14,12 +14,3 @@ secret.py
 # ignore h5 files
 *.h5
 
-
-
-
-                               [ Read 15 lines ]
-^G Get Help  ^O Write Out ^W Where Is  ^K Cut Text  ^J Justify   ^C Cur Pos
-^X Exit      ^R Read File ^\ Replace   ^U Uncut Text^T To Spell  ^_ Go To Line
-
-
-venv/
