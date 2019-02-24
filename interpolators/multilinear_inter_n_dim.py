@@ -1,5 +1,5 @@
 """
-An inplementation of a multilinear interpolator in python.
+An implementation of a multilinear interpolator in python.
 """
 import numpy as np
 
