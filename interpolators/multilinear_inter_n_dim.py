@@ -20,8 +20,8 @@ def _get_multilinear_value(channel, position):
     """
     Calculate the interpolated value for a given position in the
     channel content.
-        channel: A N-D Array [D0, D1, ..., DN-1]
-        position: A 1-D float32 Array of N elements. Contents the position in
+        :param channel: A N-D Array [D0, D1, ..., DN-1]
+        :param position: A 1-D float32 Array of N elements. Contents the position in
                     the channel. 
     """
     N = position.shape[0]
@@ -69,9 +69,8 @@ def _get_multilinear_value(channel, position):
 def _resize_channel_multilinear(channel, size):
     """
     Resizes content in N dimensions to size using multiliniear interpolation.
-    args:
-        images: An (N + 2)-D Array [D0, D1, ..., DN-1]
-        size: A 1-D int32 Array of N elements: new_0D, new_1D,..new_N-1D 
+        :param channel: An (N + 2)-D Array [D0, D1, ..., DN-1]
+        :param size: A 1-D int32 Array of N elements: new_0D, new_1D,..new_N-1D 
     """
     N = size.shape[0]
     # This is the only code limiting N, but can be extended easily
@@ -121,9 +120,8 @@ def _resize_channel_multilinear(channel, size):
 def resize_multilinear_py(content, size):
     """
     Resize content in N dimensions to size using multiliniear interpolation.
-    args:
-        images: An (N + 2)-D Array [batch, D0, D1, ..., DN-1, channels]
-        size: A 1-D int32 Array of N elements: new_0D, new_1D,..new_N-1D.
+        :param content: An (N + 2)-D Array [batch, D0, D1, ..., DN-1, channels]
+        :param size: A 1-D int32 Array of N elements: new_0D, new_1D,..new_N-1D.
                 In this version N is limited to 4
     """
     batches = content.shape[0]
